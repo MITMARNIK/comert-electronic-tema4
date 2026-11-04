@@ -1,0 +1,13 @@
+# robots.txt – instructiuni pentru robotii motoarelor de cautare.
+# Nota: in productie acest fisier trebuie sa fie la radacina domeniului (https://domeniu.ro/robots.txt).
+
+# Toti robotii pot accesa tot site-ul...
+User-agent: *
+Allow: /
+# ...cu exceptia paginii de eroare
+Disallow: /seo-shop/after/404.html
+# ...si a versiunii neoptimizate (continut duplicat, doar pentru comparatie)
+Disallow: /seo-shop/before/
+
+# Unde gasesc robotii lista completa a paginilor
+Sitemap: http://localhost/seo-shop/after/sitemap.xml

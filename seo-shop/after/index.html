@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<!-- lang="ro": spune motoarelor de cautare si cititoarelor de ecran ca pagina e in romana (SEO + accesibilitate) -->
+<html lang="ro">
+<head>
+  <!-- ===== 1. META DE BAZA ===== -->
+  <meta charset="utf-8">
+  <!-- viewport: OBLIGATORIU pentru mobil; fara el pagina e afisata micsorata (Google foloseste mobile-first indexing) -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- SEO: titlu unic, ~60 caractere, cu cuvantul cheie la inceput -->
+  <title>Laptopuri ASUS, HP și Lenovo – Prețuri și Specificații | TechShop</title>
+  <!-- SEO: meta description unica, ~155 caractere; apare ca text sub titlu in Google -->
+  <meta name="description" content="Compară laptopurile ASUS Vivobook 15, HP Pavilion 15 și Lenovo IdeaPad Slim 5: prețuri, specificații complete, recenzii și răspunsuri la întrebări frecvente.">
+  <!-- SEO: permitem indexarea si urmarirea linkurilor -->
+  <meta name="robots" content="index, follow">
+  <!-- SEO: URL-ul canonic (versiunea "oficiala" a paginii) – evita continutul duplicat -->
+  <link rel="canonical" href="http://localhost/seo-shop/after/index.html">
+
+  <!-- ===== 2. OPEN GRAPH (Facebook, LinkedIn, WhatsApp) – cum arata linkul cand e distribuit ===== -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="TechShop">
+  <meta property="og:locale" content="ro_RO">
+  <meta property="og:title" content="Laptopuri ASUS, HP și Lenovo – Prețuri și Specificații">
+  <meta property="og:description" content="Compară ASUS Vivobook 15, HP Pavilion 15 și Lenovo IdeaPad Slim 5: prețuri, specificații și recenzii.">
+  <meta property="og:url" content="http://localhost/seo-shop/after/index.html">
+  <meta property="og:image" content="http://localhost/seo-shop/after/img/laptop-asus-vivobook-15-800.webp">
+  <!-- ===== 3. TWITTER / X CARD ===== -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Laptopuri ASUS, HP și Lenovo – Prețuri și Specificații">
+  <meta name="twitter:description" content="Compară ASUS Vivobook 15, HP Pavilion 15 și Lenovo IdeaPad Slim 5: prețuri, specificații și recenzii.">
+  <meta name="twitter:image" content="http://localhost/seo-shop/after/img/laptop-asus-vivobook-15-800.webp">
+
+  <!-- ===== 4. VITEZA: preconnect ===== -->
+  <!-- Deschidem din timp conexiunea (DNS + TCP + TLS) catre CDN, ca Bootstrap sa se descarce mai repede -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+
+  <!-- ===== 5. CSS ===== -->
+  <!-- Bootstrap 5 de pe CDN (doar CSS-ul; JS-ul Bootstrap NU il incarcam – vezi js/main.js) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <!-- CSS-ul nostru, mic, dupa Bootstrap ca sa-l poata suprascrie -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+
+  <!-- ===== 6. DATE STRUCTURATE (JSON-LD) ===== -->
+  <!-- ItemList: spune Google ca pagina este o lista de produse, cu ordinea si URL-ul fiecaruia -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Laptopuri recomandate",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "url": "http://localhost/seo-shop/after/laptop-asus.html" },
+      { "@type": "ListItem", "position": 2, "url": "http://localhost/seo-shop/after/laptop-hp.html" },
+      { "@type": "ListItem", "position": 3, "url": "http://localhost/seo-shop/after/laptop-lenovo.html" }
+    ]
+  }
+  </script>
+  <!-- WebSite + Organization: identitatea site-ului (poate aparea in Knowledge Panel) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "TechShop",
+    "url": "http://localhost/seo-shop/after/",
+    "publisher": { "@type": "Organization", "name": "TechShop", "logo": "http://localhost/seo-shop/after/img/favicon.svg" }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ===== HEADER + NAV (HTML semantic: <header> si <nav>) ===== -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark site-nav" aria-label="Meniu principal">
+      <div class="container">
+        <a class="navbar-brand brand-logo" href="index.html">TechShop</a>
+        <!-- Butonul "hamburger": vizibil doar pe ecrane mici; meniul se pliaza pe mobil -->
+        <button class="navbar-toggler" type="button" aria-controls="mainNav" aria-expanded="false" aria-label="Deschide meniul">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Acasă</a></li>
+            <li class="nav-item"><a class="nav-link" href="laptop-asus.html">ASUS Vivobook 15</a></li>
+            <li class="nav-item"><a class="nav-link" href="laptop-hp.html">HP Pavilion 15</a></li>
+            <li class="nav-item"><a class="nav-link" href="laptop-lenovo.html">Lenovo IdeaPad Slim 5</a></li>
+            <li class="nav-item"><a class="nav-link" href="specificatii-laptopuri.html">Comparație</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ===== CONTINUT PRINCIPAL (<main> = continutul unic al paginii) ===== -->
+  <main>
+    <!-- Hero: contine SINGURUL <h1> al paginii (SEO: un singur subiect principal) -->
+    <section class="hero">
+      <div class="container">
+        <h1 class="display-5 fw-bold">Laptopuri ASUS, HP și Lenovo pentru studenți și birou</h1>
+        <p class="lead mb-0">Am ales trei laptopuri populare cu procesoare Intel de generația a 13-a, 16 GB RAM și SSD rapid. Compară prețurile, specificațiile și părerile clienților.</p>
+      </div>
+    </section>
+
+    <!-- Lista de produse: grid Bootstrap (1 coloana pe mobil, 2 pe tableta, 3 pe desktop) -->
+    <section class="container py-5" aria-labelledby="produse">
+      <h2 id="produse" class="h3 mb-4">Produse recomandate</h2>
+      <div class="row g-4">
+
+        <!-- Fiecare produs este un <article> = continut de sine statator -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <article class="card product-card h-100 shadow-sm">
+            <!-- VITEZA: WebP mic (400px) + srcset pentru ecrane retina; width/height => fara CLS.
+                 Prima imagine e vizibila imediat, deci NU are loading="lazy". -->
+            <img src="img/laptop-asus-vivobook-15-400.webp"
+                 srcset="img/laptop-asus-vivobook-15-400.webp 400w, img/laptop-asus-vivobook-15-800.webp 800w"
+                 sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
+                 width="400" height="300" class="card-img-top product-img"
+                 alt="Laptop ASUS Vivobook 15 argintiu, deschis, văzut din unghi lateral">
+            <div class="card-body d-flex flex-column">
+              <h3 class="h5 card-title">ASUS Vivobook 15</h3>
+              <p class="card-text text-secondary">Intel Core i5-1335U, 16 GB RAM, SSD 512 GB, ecran 15,6" Full HD.</p>
+              <p class="price mb-3">2.799,99 lei</p>
+              <!-- Text de link descriptiv (nu "click aici") – ajuta SEO si accesibilitatea -->
+              <a href="laptop-asus.html" class="btn btn-brand mt-auto">Vezi detalii ASUS Vivobook 15</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4">
+          <article class="card product-card h-100 shadow-sm">
+            <!-- loading="lazy": pe mobil aceasta imagine e sub ecran, se incarca doar la derulare -->
+            <img src="img/laptop-hp-pavilion-15-400.webp"
+                 srcset="img/laptop-hp-pavilion-15-400.webp 400w, img/laptop-hp-pavilion-15-800.webp 800w"
+                 sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
+                 width="400" height="300" loading="lazy" decoding="async" class="card-img-top product-img"
+                 alt="Laptop HP Pavilion 15 albastru închis, deschis, văzut din unghi lateral">
+            <div class="card-body d-flex flex-column">
+              <h3 class="h5 card-title">HP Pavilion 15</h3>
+              <p class="card-text text-secondary">Intel Core i7-1355U, 16 GB RAM, SSD 1 TB, ecran 15,6" Full HD IPS.</p>
+              <p class="price mb-3">3.499,99 lei</p>
+              <a href="laptop-hp.html" class="btn btn-brand mt-auto">Vezi detalii HP Pavilion 15</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4">
+          <article class="card product-card h-100 shadow-sm">
+            <img src="img/laptop-lenovo-ideapad-slim-5-400.webp"
+                 srcset="img/laptop-lenovo-ideapad-slim-5-400.webp 400w, img/laptop-lenovo-ideapad-slim-5-800.webp 800w"
+                 sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
+                 width="400" height="300" loading="lazy" decoding="async" class="card-img-top product-img"
+                 alt="Laptop Lenovo IdeaPad Slim 5 gri închis, deschis, văzut din unghi lateral">
+            <div class="card-body d-flex flex-column">
+              <h3 class="h5 card-title">Lenovo IdeaPad Slim 5</h3>
+              <p class="card-text text-secondary">Intel Core i5-13420H, 16 GB RAM, SSD 512 GB, ecran 16" WUXGA.</p>
+              <p class="price mb-3">3.199,99 lei</p>
+              <a href="laptop-lenovo.html" class="btn btn-brand mt-auto">Vezi detalii Lenovo IdeaPad Slim 5</a>
+            </div>
+          </article>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Sectiune de text: continut util pentru utilizatori si motoare de cautare -->
+    <section class="container pb-5" aria-labelledby="ghid">
+      <h2 id="ghid" class="h3">Cum alegi laptopul potrivit?</h2>
+      <p>Pentru facultate și birou contează mai ales procesorul, memoria RAM și autonomia bateriei. Toate cele trei modele au 16 GB RAM, suficient pentru zeci de taburi deschise și aplicații Office. Vezi <a href="specificatii-laptopuri.html">tabelul complet de comparație a laptopurilor</a>.</p>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer py-4">
+    <div class="container d-flex flex-column flex-md-row justify-content-between gap-2">
+      <p class="mb-0">&copy; <span id="year">2026</span> TechShop – proiect universitar SEO &amp; Page Speed</p>
+      <p class="mb-0"><a href="specificatii-laptopuri.html">Comparație laptopuri</a> · <a href="sitemap.xml">Sitemap</a></p>
+    </div>
+  </footer>
+
+  <!-- VITEZA: script cu "defer" – se descarca in paralel si ruleaza dupa parsarea HTML-ului (nu blocheaza randarea) -->
+  <script src="js/main.js" defer></script>
+</body>
+</html>

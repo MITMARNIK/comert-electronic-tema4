@@ -1,0 +1,81 @@
+/* BEFORE: CSS neoptimizat – foloseste un font web descarcat de la Google (cerere blocanta in plus). */
+body { font-family: 'Poppins', sans-serif; }
+/* --- 1. Variabile de culoare (o singura sursa pentru toata paleta) --- */
+:root {
+  --brand: #4f46e5;          /* indigo */
+  --brand-2: #06b6d4;        /* cyan */
+  --dark: #0f172a;           /* fundal inchis navbar/footer */
+  --muted: #64748b;
+  --radius: 1rem;
+}
+
+/* --- 3. Navbar inchis la culoare cu logo in gradient --- */
+.site-nav { background: var(--dark); }
+.brand-logo {
+  font-weight: 800;
+  background: linear-gradient(90deg, var(--brand-2), #a78bfa);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent !important;
+}
+
+/* --- 4. Hero (banda de sus de pe pagina principala) --- */
+.hero {
+  background: linear-gradient(135deg, var(--dark) 0%, #312e81 60%, var(--brand) 100%);
+  color: #fff;
+  padding: 3.5rem 0;
+}
+.hero p { color: #c7d2fe; max-width: 40rem; }
+
+/* --- 5. Carduri de produs cu micro-animatie la hover ---
+   VITEZA/INP: animam doar "transform" si "box-shadow" – proprietati ieftine
+   care nu forteaza recalcularea layout-ului. */
+.product-card {
+  border: 0;
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 1rem 2rem rgba(15, 23, 42, .12);
+}
+
+/* --- 6. Imagini responsive ---
+   CLS: atributele width/height din HTML dau browserului raportul 4:3;
+   "height:auto" pastreaza proportia cand imaginea se micsoreaza pe mobil. */
+img { max-width: 100%; height: auto; }
+.product-img { background: #fff; border-radius: var(--radius); }
+
+/* --- 7. Pret si rating --- */
+.price { font-size: 1.75rem; font-weight: 800; color: var(--brand); }
+.rating { color: #f59e0b; font-weight: 600; }
+
+/* --- 8. Butoane cu gradient --- */
+.btn-brand {
+  background: linear-gradient(90deg, var(--brand), var(--brand-2));
+  color: #fff;
+  border: 0;
+}
+.btn-brand:hover { color: #fff; filter: brightness(1.1); }
+
+/* --- 9. FAQ cu <details>/<summary> nativ (fara JavaScript!) --- */
+.faq details {
+  background: #fff;
+  border-radius: .75rem;
+  padding: 1rem 1.25rem;
+  margin-bottom: .75rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .06);
+}
+.faq summary { font-weight: 600; cursor: pointer; }
+.faq details[open] summary { color: var(--brand); margin-bottom: .5rem; }
+
+/* --- 10. Breadcrumb si footer --- */
+.breadcrumb { font-size: .9rem; }
+.site-footer { background: var(--dark); color: #94a3b8; }
+.site-footer a { color: #cbd5e1; }
+
+/* --- 11. Accesibilitate: respectam utilizatorii care nu vor animatii --- */
+@media (prefers-reduced-motion: reduce) {
+  .product-card { transition: none; }
+}

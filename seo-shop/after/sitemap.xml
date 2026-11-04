@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- sitemap.xml: lista tuturor paginilor indexabile, cu data ultimei modificari.
+     Ajuta Google sa descopere rapid toate paginile. URL-urile sunt identice cu cele din canonical.
+     Pagina 404 NU apare aici (nu trebuie indexata). -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>http://localhost/seo-shop/after/index.html</loc>
+    <lastmod>2026-10-30</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost/seo-shop/after/laptop-asus.html</loc>
+    <lastmod>2026-10-30</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost/seo-shop/after/laptop-hp.html</loc>
+    <lastmod>2026-10-30</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost/seo-shop/after/laptop-lenovo.html</loc>
+    <lastmod>2026-10-30</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost/seo-shop/after/specificatii-laptopuri.html</loc>
+    <lastmod>2026-10-30</lastmod>
+  </url>
+</urlset>

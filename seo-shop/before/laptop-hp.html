@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<!--
+  VERSIUNEA "BEFORE" (NEOPTIMIZATA) – DOAR PENTRU COMPARATIE IN LIGHTHOUSE.
+  Greseli de viteza facute INTENTIONAT:
+   - imagini PNG uriase (2400x1800, ~13 MB), fara WebP si fara srcset
+   - imagini fara width/height  => layout shift (CLS)
+   - fara loading="lazy"         => toate imaginile se descarca imediat
+   - fara preconnect / preload
+   - Google Fonts + bootstrap.bundle.min.js (~80 KB) in <head>, FARA defer => blocheaza randarea
+   - .htaccess fara compresie gzip si fara cache in browser
+-->
+<html lang="ro">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HP Pavilion 15 – i7, 16 GB RAM, SSD 1 TB | TechShop</title>
+  <meta name="description" content="Laptop HP Pavilion 15 cu Intel Core i7-1355U, 16 GB RAM, SSD 1 TB și ecran 15,6&quot; Full HD IPS. Preț 3.499,99 lei, rating 4,6/5. Specificații complete și FAQ.">
+  <meta name="robots" content="noindex, follow">
+  <link rel="canonical" href="http://localhost/seo-shop/before/laptop-hp.html">
+  <meta property="og:type" content="product">
+  <meta property="og:site_name" content="TechShop">
+  <meta property="og:locale" content="ro_RO">
+  <meta property="og:title" content="HP Pavilion 15 – i7, 16 GB RAM, SSD 1 TB">
+  <meta property="og:description" content="Laptop HP Pavilion 15 cu Intel Core i7-1355U și SSD 1 TB, la 3.499,99 lei.">
+  <meta property="og:url" content="http://localhost/seo-shop/before/laptop-hp.html">
+  <meta property="og:image" content="http://localhost/seo-shop/before/img/laptop-hp-pavilion-15.png">
+  <meta property="og:image:width" content="800">
+  <meta property="og:image:height" content="600">
+  <meta property="og:image:alt" content="Laptop HP Pavilion 15 albastru închis">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="HP Pavilion 15 – i7, 16 GB RAM, SSD 1 TB">
+  <meta name="twitter:description" content="Laptop HP Pavilion 15 cu Intel Core i7-1355U și SSD 1 TB, la 3.499,99 lei.">
+  <meta name="twitter:image" content="http://localhost/seo-shop/before/img/laptop-hp-pavilion-15.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "HP Pavilion 15",
+    "image": "http://localhost/seo-shop/before/img/laptop-hp-pavilion-15.png",
+    "description": "Laptop HP Pavilion 15 cu procesor Intel Core i7-1355U, 16 GB RAM, SSD 1 TB și ecran 15,6\" Full HD IPS, pentru multitasking și creație de conținut.",
+    "sku": "15-eg3003nq",
+    "brand": { "@type": "Brand", "name": "HP" },
+    "offers": {
+      "@type": "Offer",
+      "url": "http://localhost/seo-shop/before/laptop-hp.html",
+      "price": "3499.99",
+      "priceCurrency": "RON",
+      "availability": "https://schema.org/InStock",
+      "itemCondition": "https://schema.org/NewCondition"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.6",
+      "bestRating": "5",
+      "reviewCount": "94"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Acasă", "item": "http://localhost/seo-shop/before/index.html" },
+      { "@type": "ListItem", "position": 2, "name": "HP Pavilion 15", "item": "http://localhost/seo-shop/before/laptop-hp.html" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Este HP Pavilion 15 bun pentru editare foto și video?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Pentru editare foto și video ușoară, da: procesorul Intel Core i7-1355U și SSD-ul de 1 TB fac față proiectelor Full HD. Pentru 4K este recomandată o placă video dedicată." }
+      },
+      {
+        "@type": "Question",
+        "name": "Cât ține bateria la HP Pavilion 15?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Bateria de 41 Wh oferă aproximativ 7 ore de utilizare obișnuită și suportă încărcare rapidă: 50% în circa 45 de minute." }
+      },
+      {
+        "@type": "Question",
+        "name": "Are HP Pavilion 15 cititor de amprentă?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Da, versiunea 15-eg3003nq are cititor de amprentă integrat, compatibil cu Windows Hello." }
+      }
+    ]
+  }
+  </script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=block">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark site-nav" aria-label="Meniu principal">
+      <div class="container">
+        <a class="navbar-brand brand-logo" href="index.html">TechShop</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Deschide meniul">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Acasă</a></li>
+            <li class="nav-item"><a class="nav-link" href="laptop-asus.html">ASUS Vivobook 15</a></li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="laptop-hp.html">HP Pavilion 15</a></li>
+            <li class="nav-item"><a class="nav-link" href="laptop-lenovo.html">Lenovo IdeaPad Slim 5</a></li>
+            <li class="nav-item"><a class="nav-link" href="specificatii-laptopuri.html">Comparație</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container py-4">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">Acasă</a></li>
+        <li class="breadcrumb-item active" aria-current="page">HP Pavilion 15</li>
+      </ol>
+    </nav>
+
+    <article>
+      <div class="row g-4 align-items-center">
+        <div class="col-12 col-lg-6">
+          <img src="img/laptop-hp-pavilion-15.png" class="product-img shadow-sm" alt="Laptop HP Pavilion 15 albastru închis, deschis, cu ecran Full HD IPS de 15,6 inch, văzut din unghi lateral">
+        </div>
+        <div class="col-12 col-lg-6">
+          <h1 class="fw-bold">HP Pavilion 15</h1>
+          <p class="rating mb-2">★★★★½ 4,6 din 5 (94 recenzii)</p>
+          <p class="lead">Laptop HP Pavilion 15 cu procesor Intel Core i7-1355U, 16 GB RAM, SSD 1 TB și ecran 15,6" Full HD IPS, pentru multitasking și creație de conținut.</p>
+          <p class="price mb-1">3.499,99 lei</p>
+          <p class="text-success fw-semibold">✔ În stoc</p>
+          <div class="d-flex flex-wrap gap-2">
+            <a class="btn btn-brand" href="https://www.hp.com/us-en/shop/slp/pavilion-laptops" target="_blank" rel="noopener">Pagina oficială HP ↗</a>
+            <a class="btn btn-outline-dark" href="specificatii-laptopuri.html#hp">Specificații tehnice complete</a>
+          </div>
+        </div>
+      </div>
+
+      <section class="mt-5" aria-labelledby="descriere">
+        <h2 id="descriere" class="h3">Descriere</h2>
+        <p>HP Pavilion 15 are o carcasă din aluminiu, difuzoare B&amp;O și cameră Full HD, fiind o alegere bună pentru cei care lucrează mult cu fișiere mari.</p>
+        <h3 class="h5">Performanță</h3>
+        <p>Procesorul Intel Core i7-1355U și SSD-ul NVMe de 1 TB asigură pornire în câteva secunde și deschiderea rapidă a aplicațiilor.</p>
+        <h3 class="h5">Ecran și conectivitate</h3>
+        <p>Ecranul IPS de 15,6" Full HD are unghiuri largi de vizualizare. Sunt incluse Wi-Fi 6, Bluetooth 5.3, USB-C cu Power Delivery și HDMI 2.1.</p>
+      </section>
+
+      <section class="mt-5 faq" aria-labelledby="faq">
+        <h2 id="faq" class="h3 mb-3">Întrebări frecvente</h2>
+        <details>
+          <summary>Este HP Pavilion 15 bun pentru editare foto și video?</summary>
+          <p class="mb-0">Pentru editare foto și video ușoară, da: procesorul Intel Core i7-1355U și SSD-ul de 1 TB fac față proiectelor Full HD. Pentru 4K este recomandată o placă video dedicată.</p>
+        </details>
+        <details>
+          <summary>Cât ține bateria la HP Pavilion 15?</summary>
+          <p class="mb-0">Bateria de 41 Wh oferă aproximativ 7 ore de utilizare obișnuită și suportă încărcare rapidă: 50% în circa 45 de minute.</p>
+        </details>
+        <details>
+          <summary>Are HP Pavilion 15 cititor de amprentă?</summary>
+          <p class="mb-0">Da, versiunea 15-eg3003nq are cititor de amprentă integrat, compatibil cu Windows Hello.</p>
+        </details>
+      </section>
+    </article>
+    <section class="mt-5" aria-labelledby="similare">
+      <h2 id="similare" class="h3 mb-3">Alte laptopuri</h2>
+      <div class="row g-4">
+        <div class="col-12 col-md-6">
+          <a href="laptop-asus.html" class="card product-card text-decoration-none text-reset h-100">
+            <img src="img/laptop-asus-vivobook-15.png" class="card-img-top product-img" alt="Laptop ASUS Vivobook 15 argintiu, deschis">
+            <span class="card-body fw-semibold">ASUS Vivobook 15 – 2.799,99 lei</span>
+          </a>
+        </div>
+        <div class="col-12 col-md-6">
+          <a href="laptop-lenovo.html" class="card product-card text-decoration-none text-reset h-100">
+            <img src="img/laptop-lenovo-ideapad-slim-5.png" class="card-img-top product-img" alt="Laptop Lenovo IdeaPad Slim 5 gri închis, deschis">
+            <span class="card-body fw-semibold">Lenovo IdeaPad Slim 5 – 3.199,99 lei</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer py-4">
+    <div class="container d-flex flex-column flex-md-row justify-content-between gap-2">
+      <p class="mb-0">&copy; <span id="year">2026</span> TechShop – proiect universitar SEO &amp; Page Speed</p>
+      <p class="mb-0"><a href="specificatii-laptopuri.html">Comparație laptopuri</a> · <a href="../after/sitemap.xml">Sitemap</a></p>
+    </div>
+  </footer>
+</body>
+</html>
