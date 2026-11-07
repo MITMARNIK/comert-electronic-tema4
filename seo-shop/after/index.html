@@ -37,8 +37,8 @@
   <!-- ===== 5. CSS ===== -->
   <!-- Bootstrap 5 de pe CDN (doar CSS-ul; JS-ul Bootstrap NU il incarcam – vezi js/main.js) -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-  <!-- CSS-ul nostru, mic, dupa Bootstrap ca sa-l poata suprascrie -->
-  <link rel="stylesheet" href="css/style.css">
+  <!-- CSS-ul nostru minificat automat, mic, dupa Bootstrap ca sa-l poata suprascrie -->
+  <link rel="stylesheet" href="css/style.min.css">
   <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
 
   <!-- ===== 6. DATE STRUCTURATE (JSON-LD) ===== -->
@@ -118,7 +118,8 @@
             <div class="card-body d-flex flex-column">
               <h3 class="h5 card-title">ASUS Vivobook 15</h3>
               <p class="card-text text-secondary">Intel Core i5-1335U, 16 GB RAM, SSD 512 GB, ecran 15,6" Full HD.</p>
-              <p class="price mb-3">2.799,99 lei</p>
+              <!-- Pret marcat semantic cu tagul HTML5 <data value="..."> pentru motoare de cautare -->
+              <p class="price mb-3"><data value="2799.99">2.799,99</data> lei</p>
               <!-- Text de link descriptiv (nu "click aici") – ajuta SEO si accesibilitatea -->
               <a href="laptop-asus.html" class="btn btn-brand mt-auto">Vezi detalii ASUS Vivobook 15</a>
             </div>
@@ -136,7 +137,7 @@
             <div class="card-body d-flex flex-column">
               <h3 class="h5 card-title">HP Pavilion 15</h3>
               <p class="card-text text-secondary">Intel Core i7-1355U, 16 GB RAM, SSD 1 TB, ecran 15,6" Full HD IPS.</p>
-              <p class="price mb-3">3.499,99 lei</p>
+              <p class="price mb-3"><data value="3499.99">3.499,99</data> lei</p>
               <a href="laptop-hp.html" class="btn btn-brand mt-auto">Vezi detalii HP Pavilion 15</a>
             </div>
           </article>
@@ -152,7 +153,7 @@
             <div class="card-body d-flex flex-column">
               <h3 class="h5 card-title">Lenovo IdeaPad Slim 5</h3>
               <p class="card-text text-secondary">Intel Core i5-13420H, 16 GB RAM, SSD 512 GB, ecran 16" WUXGA.</p>
-              <p class="price mb-3">3.199,99 lei</p>
+              <p class="price mb-3"><data value="3199.99">3.199,99</data> lei</p>
               <a href="laptop-lenovo.html" class="btn btn-brand mt-auto">Vezi detalii Lenovo IdeaPad Slim 5</a>
             </div>
           </article>
@@ -176,7 +177,7 @@
     </div>
   </footer>
 
-  <!-- VITEZA: script cu "defer" – se descarca in paralel si ruleaza dupa parsarea HTML-ului (nu blocheaza randarea) -->
-  <script src="js/main.js" defer></script>
+  <!-- VITEZA: script minificat automat, cu "defer" – se descarca in paralel si ruleaza dupa parsarea HTML-ului (nu blocheaza randarea) -->
+  <script src="js/main.min.js" defer></script>
 </body>
 </html>

@@ -1,0 +1,28 @@
+{
+  "name": "seo-shop",
+  "version": "1.0.0",
+  "description": "Proiect universitar SEO & Page Speed - Magazin online laptopuri (TechShop)",
+  "main": "scripts/minify.js",
+  "scripts": {
+    "build": "node scripts/minify.js",
+    "watch": "node scripts/watch.js",
+    "dev": "node scripts/watch.js"
+  },
+  "keywords": [
+    "seo",
+    "page-speed",
+    "core-web-vitals",
+    "bootstrap5",
+    "minify",
+    "css",
+    "javascript"
+  ],
+  "author": "TechShop University Project",
+  "license": "ISC",
+  "devDependencies": {
+    "clean-css": "^5.3.3",
+    "terser": "^5.31.0",
+    "chokidar": "^3.6.0"
+  }
+}
+

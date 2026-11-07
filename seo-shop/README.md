@@ -13,20 +13,28 @@ Conține două versiuni ale aceluiași site, ca să compari scorurile Lighthouse
 ```
 seo-shop/
 ├── index.html                    # pagină de start: alegi Before sau After
+├── package.json                  # configurare Node.js (compresie automata CSS & JS)
 ├── README.md
+├── scripts/
+│   ├── minify.js                 # compresie CSS (style.min.css) si JS (main.min.js)
+│   └── watch.js                  # supraveghere fisiere: recompresie automata la salvare (Ctrl+S)
 ├── after/                        # VERSIUNEA OPTIMIZATĂ
 │   ├── .htaccess                 # 404 personalizat, gzip, cache, redirect 301
 │   ├── index.html                # lista de produse
-│   ├── laptop-asus.html          # pagină produs ASUS Vivobook 15
-│   ├── laptop-hp.html            # pagină produs HP Pavilion 15
-│   ├── laptop-lenovo.html        # pagină produs Lenovo IdeaPad Slim 5
+│   ├── laptop-asus.html          # pagină produs ASUS (galerie 3 imagini + modal lightbox + semnale Google)
+│   ├── laptop-hp.html            # pagină produs HP (galerie 3 imagini + modal lightbox + semnale Google)
+│   ├── laptop-lenovo.html        # pagină produs Lenovo (galerie 3 imagini + modal lightbox + semnale Google)
 │   ├── specificatii-laptopuri.html  # pagina internă cu detalii (tabel comparativ)
 │   ├── 404.html                  # pagina de eroare
 │   ├── robots.txt
 │   ├── sitemap.xml
-│   ├── css/style.css             # CSS propriu (~3 KB)
-│   ├── js/main.js                # JS propriu (< 1 KB, doar meniul mobil)
-│   └── img/                      # imagini WebP (400px și 800px) + favicon.svg
+│   ├── css/
+│   │   ├── style.css             # CSS sursa (documentat)
+│   │   └── style.min.css         # CSS comprimat automat (-40.7%)
+│   ├── js/
+│   │   ├── main.js               # JS sursa (meniu mobil + galerie foto + modal nativ)
+│   │   └── main.min.js           # JS comprimat automat (-46.1%)
+│   └── img/                      # imagini WebP & JPG (400px și 800px) + favicon.svg
 └── before/                       # VERSIUNEA NEOPTIMIZATĂ (aceleași pagini)
     ├── .htaccess                 # fără gzip, fără cache
     ├── *.html, css/style.css
@@ -62,6 +70,28 @@ seo-shop/
 
 > Notă: dacă modulele `deflate` și `expires` nu sunt activate, site-ul funcționează (blocurile sunt în `<IfModule>`), dar fără compresie și cache.
 
+## 2.1 Compresie automată CSS & JS cu Node.js (package.json)
+
+Proiectul include un sistem automatizat de compresie (minificare) pentru fișierele CSS și JS proprii:
+
+1. **Instalare dependințe (opțional):**
+   ```bash
+   npm install
+   ```
+   *(Scripturile au și motor de minificare nativ integrat, funcționând direct cu `node` chiar și fără `npm install`)*.
+
+2. **Rularea compresiei unice (build):**
+   ```bash
+   npm run build
+   ```
+   Comprimă `after/css/style.css` în `after/css/style.min.css` (-40.7%) și `after/js/main.js` în `after/js/main.min.js` (-46.1%).
+
+3. **Compresie automată la salvare (Watcher activ):**
+   ```bash
+   npm run watch
+   ```
+   Lasă terminalul deschis: de fiecare dată când modifici și salvezi (`Ctrl+S`) `style.css` sau `main.js`, fișierele `.min.css` și `.min.js` sunt regenerate automat instantaneu!
+
 ## 3. Ce optimizări SEO au fost aplicate
 
 | # | Cerință | Unde se vede |
@@ -70,13 +100,16 @@ seo-shop/
 | 2 | `<title>` unic (~60) și meta description (~155) | `<head>` din fiecare pagină |
 | 3 | Un singur `<h1>`, h2/h3 logic, HTML semantic | `header`, `nav`, `main`, `article`, `section`, `footer` |
 | 4 | `alt` descriptiv pe toate imaginile | toate `<img>` |
-| 5 | JSON-LD `Product` (preț, monedă, stoc, rating) | paginile de produs – valori identice cu textul vizibil |
+| 5 | JSON-LD `Product` (preț, monedă, stoc, rating, 3 imagini, specificații) | paginile de produs – valori identice cu textul vizibil |
 | 6 | `BreadcrumbList` + breadcrumb vizibil | paginile de produs și comparație |
 | 7 | FAQ vizibil + `FAQPage` JSON-LD | paginile de produs (`<details>`, fără JS) |
 | 8 | `<link rel="canonical">` | toate paginile indexabile |
 | 9 | Open Graph + Twitter Card | toate paginile |
 | 10 | `sitemap.xml` + `robots.txt` | `/after` |
 | 11 | 404 personalizat în `.htaccess` | `ErrorDocument 404` |
+| 12 | **Marcarea informațiilor importante pentru Google** | Taguri `<strong>` pe atribute cheie, etichete trust (`✔ În stoc`, `Livrare gratuită`, `Garanție`), date structurate `additionalProperty` și `MerchantReturnPolicy` |
+| 13 | **Galerie 3 imagini per produs + Mărire (Lightbox)** | 3 miniaturi per produs (unghi principal, tastatură, porturi laterale); click pe miniatură schimbă imaginea afișată, iar click pe imaginea mare deschide un modal nativ `<dialog>` fără impact pe CLS |
+| 14 | **Prețuri semantice HTML5 (`<data value="...">`)** | Toate prețurile folosesc tagul nativ W3C `<data value="2799.99">2.799,99</data> lei` – leagă valoarea numerică citită de mașini de textul formatat pentru oameni |
 | + | `lang="ro"`, link-uri interne descriptive, link extern cu `rel="noopener"`, 404 cu `noindex`, `before` cu `noindex` | — |
 
 ## 4. Ce optimizări de viteză au fost aplicate
